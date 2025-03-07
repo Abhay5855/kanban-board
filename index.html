@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban board</title>
+    <script src="./javascript/board.js" defer></script>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <!-- Board section main -->
+
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <div><h1>Flowboard</h1></div>
+        <div><button class="navbar--btn">Add board</button></div>
+      </nav>
+    </header>
+
+    <!-- Add board modal -->
+    <div id="add-board-modal" class="modal--container"></div>
+
+    <!-- Sidebar -->
+
+    <!-- Board section -->
+
+    <main class="wrapper">
+      <div class="board--wrapper">
+        <!-- In progress -->
+        <section id="todo-board" class="board">
+          <div class="board--label">
+            <h2>Todo</h2>
+
+            <div class="board--ticket">
+              <span class="ticket--title">
+                Add Phone Number firld to user group creation page
+              </span>
+            </div>
+          </div>
+        </section>
+        <section id="in-progress-board" class="board">
+          <div class="board--label">
+            <h2>In Progress</h2>
+
+            <div class="board--ticket">
+              <span class="ticket--title">
+                Add Phone Number firld to user group creation page
+              </span>
+            </div>
+            <div class="board--ticket">
+              <span class="ticket--title">
+                Add Phone Number firld to user group creation page
+              </span>
+            </div>
+            <div class="board--ticket">
+              <span class="ticket--title">
+                Add Phone Number firld to user group creation page
+              </span>
+            </div>
+          </div>
+        </section>
+        <section id="done-board" class="board">
+          <div class="board--label">
+            <h2>Done</h2>
+
+            <div class="board--ticket">
+              <span class="ticket--title">
+                Add Phone Number firld to user group creation page
+              </span>
+            </div>
+            <div class="board--ticket">
+              <span class="ticket--title">
+                Add Phone Number firld to user group creation page
+              </span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

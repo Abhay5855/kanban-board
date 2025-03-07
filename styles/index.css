@@ -1,0 +1,153 @@
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin-block-end: 0;
+  }
+
+  textarea:not([rows]) {
+    min-height: 10em;
+  }
+
+  :target {
+    scroll-margin-block: 5ex;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+@layer layouts {
+  :root {
+    --board-background: #ececec;
+    --board-section-background: #fff;
+  }
+
+  .wrapper {
+    max-width: 1330px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .board--wrapper {
+    max-width: 1330px;
+    padding: 1rem 2rem;
+    background-color: var(--board-background);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-flow: column;
+    gap: 2rem;
+  }
+}
+
+@layer components {
+  :root {
+    --ticket-background: #fff;
+    --ticket-border: #ececec;
+  }
+  .board {
+    min-width: 180px;
+    flex-direction: column;
+    background-color: var(--board-section-background);
+    padding: 1rem;
+    border-radius: 4px;
+  }
+
+  .board--label {
+    text-align: left;
+  }
+
+  .board--ticket {
+    padding: 0.5rem;
+    border-radius: 6px;
+    background-color: var(--ticket-background);
+    border: 1px solid var(--ticket-border);
+    cursor: pointer;
+    margin: 1rem 0 0 0;
+  }
+
+  .ticket--title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  header {
+    padding: 0.5rem 2.5rem;
+    border-bottom: 1px solid var(--ticket-border);
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar--btn {
+    outline: transparent;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+  }
+}
