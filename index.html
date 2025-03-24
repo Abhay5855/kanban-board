@@ -6,6 +6,7 @@
     <title>Kanban board</title>
     <script src="./javascript/board.js" defer></script>
     <link rel="stylesheet" href="./styles/index.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <!-- Board section main -->
@@ -14,20 +15,43 @@
     <header>
       <nav class="navbar">
         <div><h1>Flowboard</h1></div>
-        <div><button class="navbar--btn">Add board</button></div>
+        <div><button onclick="addNewBoard()" class="navbar--btn" id="add-board-btn">Add board</button></div>
       </nav>
     </header>
 
     <!-- Add board modal -->
-    <div id="add-board-modal" class="modal--container"></div>
+    <div id="add-board-modal" class="modal--container">
+      <div class="modal">
+        <div class="modal--header">
+          <h1>Add new Board</h1>
+            <span id="close-btn-icon" class="material-icons close-btn-icon">close</span>
+        </div>
+        
+           <div class="modal--body">
+            <div class="form--group">
+              <label for="board-name">Board Name <span class="required-field">*</span></label>
+              <input required type="text" id="board-name" name="board-name" placeholder="Enter your board name" />
+            </div>
+            </div>
+        </div>
+        <div class="modal--footer">
+          <button id="cancel-board-modal" class="modal--btn-cancel">Cancel</button>
+          <button id="submit-board-btn" class="modal--btn-add">Get Started</button>
+        </div>
+       
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Sidebar -->
 
     <!-- Board section -->
 
-    <main class="wrapper">
+    <!-- <main class="wrapper">
       <div class="board--wrapper">
-        <!-- In progress -->
+      
         <section id="todo-board" class="board">
           <div class="board--label">
             <h2>Todo</h2>
@@ -77,6 +101,6 @@
           </div>
         </section>
       </div>
-    </main>
+    </main> -->
   </body>
 </html>
